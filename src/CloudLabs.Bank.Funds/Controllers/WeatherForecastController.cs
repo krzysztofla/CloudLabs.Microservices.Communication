@@ -1,3 +1,4 @@
+using Azure.Messaging.ServiceBus;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CloudLabs.Bank.Funds.Controllers;
@@ -6,16 +7,21 @@ namespace CloudLabs.Bank.Funds.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
+    private readonly ServiceBusSender sender;
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ServiceBusSender _sender, ILogger<WeatherForecastController> logger)
     {
+        sender = _sender;
         _logger = logger;
+    }
+
+
+    [HttpGet]
+    public async Task<IActionResult> TestGet()
+    {
+        await sender.SendMessageAsync(new ServiceBusMessage("Test message from Funds service"));
+        return Ok(Task.FromResult(""));
     }
 
 }

@@ -1,19 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{880CB144-50E6-4B0A-9003-C81217303220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudLabs.Store.Cart", "src\CloudLabs.Store.Cart\CloudLabs.Store.Cart.csproj", "{F04790B7-43FC-42E2-BB9C-34CFBD50E1C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudLabs.Store.Cart", "src\CloudLabs.Store.Cart\CloudLabs.Store.Cart.csproj", "{F04790B7-43FC-42E2-BB9C-34CFBD50E1C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudLabs.Bank.Funds", "src\CloudLabs.Bank.Funds\CloudLabs.Bank.Funds.csproj", "{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudLabs.Bank.Funds", "src\CloudLabs.Bank.Funds\CloudLabs.Bank.Funds.csproj", "{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudLabs.Shared", "src\CloudLabs.Shared\CloudLabs.Shared.csproj", "{F824FE88-2734-4303-9975-AD1DB179CC2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{F04790B7-43FC-42E2-BB9C-34CFBD50E1C2} = {880CB144-50E6-4B0A-9003-C81217303220}
-		{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4} = {880CB144-50E6-4B0A-9003-C81217303220}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F04790B7-43FC-42E2-BB9C-34CFBD50E1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +25,20 @@ Global
 		{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F824FE88-2734-4303-9975-AD1DB179CC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F824FE88-2734-4303-9975-AD1DB179CC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F824FE88-2734-4303-9975-AD1DB179CC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F824FE88-2734-4303-9975-AD1DB179CC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F04790B7-43FC-42E2-BB9C-34CFBD50E1C2} = {880CB144-50E6-4B0A-9003-C81217303220}
+		{AAB26767-2CB2-4EAF-9F2B-2127C2F7F3C4} = {880CB144-50E6-4B0A-9003-C81217303220}
+		{F824FE88-2734-4303-9975-AD1DB179CC2E} = {880CB144-50E6-4B0A-9003-C81217303220}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB283459-CB28-4F4E-9FD2-B5219EE000FC}
 	EndGlobalSection
 EndGlobal
