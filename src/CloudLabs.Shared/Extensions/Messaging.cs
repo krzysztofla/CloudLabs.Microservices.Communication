@@ -5,9 +5,9 @@ namespace CloudLabs.Shared.Extensions
 {
     public static class Messaging
     {
-        static string connectionString = "<NAMESPACE CONNECTION STRING>";
+        static string connectionString = "";
 
-        static string queueName = "<QUEUE NAME>";
+        static string queueName = "";
 
         public static IServiceCollection RegisterServiceBus(this IServiceCollection services)
         {

@@ -1,3 +1,4 @@
+using CloudLabs.Bank.Funds.Services;
 using CloudLabs.Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.RegisterServiceBus();
+builder.Services.AddHostedService<FundsService>();
 
 var app = builder.Build();
 
