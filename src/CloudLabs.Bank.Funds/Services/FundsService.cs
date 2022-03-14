@@ -6,20 +6,17 @@ namespace CloudLabs.Bank.Funds.Services
 {
     public class FundsService : BackgroundService
     {
+        private readonly ServiceBusClient _client;
         private readonly ServiceBusProcessor _processor;
         private readonly ServiceBusSender _sender;
-        public FundsService(ServiceBusSender sender, ServiceBusProcessor processor)
+        public FundsService(ServiceBusClient client)
         {
-            _processor = processor;
-            _sender = sender;
+            _client = client;
+            _processor = _client.CreateProcessor("CloudLabs.Bank.Funds");
+            _sender = _client.CreateSender("CloudLabs.Bank.Orders"); 
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            await DoWork();
-        }
-
-        private async Task DoWork()
         {
             _processor.ProcessMessageAsync += MessageHandler;
             _processor.ProcessErrorAsync += ErrorHandler;
