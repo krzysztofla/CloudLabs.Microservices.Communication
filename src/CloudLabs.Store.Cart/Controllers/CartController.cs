@@ -13,12 +13,8 @@ public class CartController : ControllerBase
 
     private readonly ServiceBusClient _client;
 
-
-    private readonly ILogger<CartController> _logger;
-
-    public CartController(ServiceBusClient client, ILogger<CartController> logger)
+    public CartController(ServiceBusClient client)
     {
-        _logger = logger;
         _client = client;
         _sender = _client.CreateSender("CloudLabs.Bank.Orders"); ;
     }
